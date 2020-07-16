@@ -1,0 +1,39 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h6 style="text-align: center;">Login 登入</h6>
+    </mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="profileForm" novalidate class="example-form">
+
+    <mat-card-content>
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input formControlName="Account" matInput placeholder="Username">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <input formControlName="Password" matInput placeholder="Password" type="password">
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <!-- <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner> -->
+    </mat-card-content>
+    <mat-card-actions style="margin-top: 30%;">
+      <button style="width: 100%;" mat-raised-button (click)="login()" color="primary">Login</button>
+    </mat-card-actions>
+  </form>
+
+</mat-card>
+
+<!--
+<ng-template #template>
+  <span style="text-align: center; color:red;">
+  </span>
+</ng-template> -->

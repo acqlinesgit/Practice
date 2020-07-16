@@ -1,0 +1,19 @@
+
+.example-card{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 450px;
+  min-height: 600px;
+  border-radius: 10px;
+}
+.example-full-width {
+width: 100%;
+line-height:  auto;
+margin:0 auto;
+}
+
+.example-full-width input {
+  margin-top: 10%;
+}

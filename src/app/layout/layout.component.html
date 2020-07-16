@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sideNav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>MY Pratice</h1>
+  <span class="filler">
+    <button mat-button [matMenuTriggerFor]="menu">
+      <nb-icon icon="person"></nb-icon>({{Member}})
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="loginout()">
+        <mat-icon>power_settings_new</mat-icon>登出
+      </button>
+    </mat-menu>
+  </span>
+</mat-toolbar>
+
+<mat-sidenav-container class="example-container" autosize>
+
+  <mat-sidenav #sideNav mode="over" class="example-sidenav">
+
+    <mat-nav-list>
+      <h3 matSubheader>示範用頁面</h3>
+      <a [routerLink]="['/', 'dashboard', 'survey']" mat-list-item>問卷調查</a>
+      <a [routerLink]="['/', 'dashboard', 'blog']" mat-list-item>部落格</a>
+      <a [routerLink]="['/', 'dashboard', 'inbox']" mat-list-item>收件夾</a>
+      <mat-divider></mat-divider>
+      <!-- 另外一組選單 -->
+      <h3 matSubheader>其他頁面</h3>
+      <a [routerLink]="['/']" mat-list-item>
+        <mat-icon>home</mat-icon>首頁
+      </a>
+      <a [routerLink]="['/']" mat-list-item>
+        <mat-icon>restaurant_menu</mat-icon>餐廳資訊
+      </a>
+      <a [routerLink]="['/']" mat-list-item>
+        <mat-icon>commute</mat-icon>交通工具
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
